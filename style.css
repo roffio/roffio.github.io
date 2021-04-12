@@ -1,0 +1,179 @@
+﻿
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body, html{
+  height: 100%;
+  overflow:  hidden;
+	font-family: 'Lato', sans-serif;
+}
+
+.container{
+  display: block;
+  position: relative;
+  margin: 40px auto;
+  height: auto;
+  width: 500px;
+  padding: 20px;
+}
+
+h2 {
+	color: #AAAAAA;
+}
+
+
+
+/* Styles for alert... 
+by the way it is so weird when you look at your code a couple of years after you wrote it XD */
+
+.alert {
+	box-sizing: border-box;
+	background-color: #BDFFE1;
+	width: 100%;
+	position: relative; 
+	top: 0;
+	left: 0;
+	z-index: 300;
+	padding: 20px 40px;
+	color: #333;
+}
+
+.alert h2 {
+	font-size: 22px;
+	color: #232323;
+	margin-top: 0;
+}
+
+.alert p {
+	line-height: 1.6em;
+	font-size:18px;
+}
+
+.alert a {
+	color: #232323;
+	font-weight: bold;
+}
+
+
+body { background-color:#292929;
+ overflow-x:hidden;}
+* {box-sizing: border-box}
+
+
+
+/* BG COLOR */
+.topnav {
+  background-color: #434343;
+  overflow: hidden;
+}
+
+/* STYLE */
+.topnav a {
+  float: left;
+  color: #cccccc;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  min-width: 200px;
+  font-family:helvetica;
+}
+
+/* COLORS ON HOVER */
+.topnav a:hover {
+  background-color: #696969;
+  color: black;
+}
+
+/* COLOR OF ACTIVE LINK */
+.topnav a.active {
+  background: rgb(255,179,56);
+  background: linear-gradient(16deg, rgba(255,179,56,1) 0%, rgba(208,129,0,1) 100%);
+  color: white;
+}
+/* EVENT LINK !!!0 */
+.topnav a.event {
+color: white;
+background: rgb(255,179,56);
+background: linear-gradient(16deg, rgba(255,179,56,1) 0%, rgba(208,129,0,1) 100%);
+}
+.topnav a.event:hover {
+background:#434343;
+color: rgb(255,179,56);
+color: linear-gradient(16deg, rgba(255,179,56,1) 0%, rgba(208,129,0,1) 100%);
+
+margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+
+
+
+
+
+
+}
