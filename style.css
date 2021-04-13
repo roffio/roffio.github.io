@@ -5,6 +5,10 @@ body, html{
   height: 100%;
   /*overflow:  hidden;*/
 	font-family: 'Lato', sans-serif;
+    width: 1920 px;
+    width: 100%;
+min-width:960px;
+}
 }
 
 .container{
@@ -18,12 +22,6 @@ body, html{
 
 h2 {
 	color: #AAAAAA;
-}
-
-#content {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 /* Styles for alert... 
