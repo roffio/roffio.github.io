@@ -8,6 +8,7 @@ body, html{
     width: 1920 px;
     width: 100%;
 min-width:960px;
+    width:100%;
 }
 }
 
@@ -24,8 +25,7 @@ h2 {
 	color: #AAAAAA;
 }
 
-/* Styles for alert... 
-by the way it is so weird when you look at your code a couple of years after you wrote it XD */
+
 
 .alert {
 	box-sizing: border-box;
