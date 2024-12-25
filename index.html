@@ -1,181 +1,141 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
 </head>
-<body style=" background-color: #240A34 ">
-    <div style="
-    height:1500px;
-    width:50%;
-    background-color:#891652;
-    position:absolute;
-    margin-left: 25%;
-    border-radius: 20px;
-    ">
-        <div style="
-        position:relative;
-        width:80%;
-        height: 1400px;
-        margin-left: 10%;
-        margin-top:50px;
-        ">
-            <h1 style="
-            font-family:'Segoe UI';
-            text-align:center;
-            color:#FFEDD8;
-            font-size: 50px;
-            ">
-                Кузьмичев С.В.
-            </h1>
-            <h3 style="
-            font-family: 'Calibri';
-            font-style:italic;
-            text-align:center;
-            color:#FFEDD8;
-            ">
-                АДБ-22-08
-            </h3>
-            <h3 style="
-            font-family: 'Calibri';
-            text-align:left;
-            color:#FFEDD8;
-margin-top:50px;
-            ">
-                junior-middle разработчик c++/python
-            </h3>
-            <h2 style="
-font-family: 'Calibri';
-color:#FFEDD8;
-margin-top:50px;
-">
-                Уровни осведомлённости:
-            </h2>
-            <div style=" background-color: #240A34; height: 150px; width: 100%; border-radius: 10px ">
-                <h2 style="
-    position:absolute;
-    margin-top:15px;
-    margin-left:5%;
-font-family: progresspixel;
-color:#FFEDD8;
-">
-                    [*] Python
-                </h2>
-                <h2 style="
-    position:absolute;
-    margin-top:15px;
-    margin-left:80%;
-font-family: progresspixel;
-color:#FFEDD8;
-">
-                    --> 8/10
-                </h2>
-                <h2 style="
-    position:absolute;
-    margin-top:45px;
-    margin-left:5%;
-font-family: progresspixel;
-color:#FFEDD8;
-">
-                    [*] C++
-                </h2>
-                <h2 style="
-    position:absolute;
-    margin-top:45px;
-    margin-left:80%;
-font-family: progresspixel;
-color:#FFEDD8;
-">
-                    --> 6/10
-                </h2>
-                <h2 style="
-    position:absolute;
-    margin-top:75px;
-    margin-left:5%;
-font-family: progresspixel;
-color:#FFEDD8;
-">
-                    [*] html/css
-                </h2>
-                <h2 style="
-    position:absolute;
-    margin-top:75px;
-    margin-left:80%;
-font-family: progresspixel;
-color:#FFEDD8;
-">
-                    --> 4/10
-                </h2>
-                <h2 style="
-    position:absolute;
-    margin-top:105px;
-    margin-left:5%;
-font-family: progresspixel;
-color:#FFEDD8;
-">
-                    [*] C#
-                </h2>
-                <h2 style="
-    position:absolute;
-    margin-top:105px;
-    margin-left:80%;
-font-family: progresspixel;
-color:#FFEDD8;
-">
-                    --> 3/10
-                </h2>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div class="flex items-center py-4">
+                        <span class="font-bold text-xl text-gray-800">Портфолио</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="#about" class="py-4 px-2 text-gray-500 hover:text-gray-900">Про меня</a>
+                    <a href="#projects" class="py-4 px-2 text-gray-500 hover:text-gray-900">Проекты</a>
+                    <a href="#contact" class="py-4 px-2 text-gray-500 hover:text-gray-900">Связаться</a>
+                </div>
             </div>
-            <h2 style=" margin-top: 30px; font-family: 'Calibri'; color: #FFEDD8; ">
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-                The quick brown fox jumps over the lazy dog.
-            </h2>
         </div>
-    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-screen flex items-center justify-center text-white pt-16">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-4">Кузьмичев Степан</h1>
+            <p class="text-xl mb-8">C++ разработчик </p>
+            <a href="#contact" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Связаться</a>
+        </div>
+    </header>
+
+     <!-- About Section -->
+     <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Про меня</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                    Опытный разработчик с фокусом на C++ и Python, создающий решения для десктопных и серверных приложений. Увлечён разработкой программного обеспечения, оптимизацией и многопоточностью, а также построением надёжных систем на современных технологиях.
+
+
+
+
+
+
+
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="font-semibold text-xl mb-3">Desktop</h3>
+                        <p class="text-gray-600">C, C++, STL, winapi, sfml, qt, MFC, Cmake, GCC, MSVC, DLL</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="font-semibold text-xl mb-3">Backend</h3>
+                        <p class="text-gray-600">Python, Flask, Docker, asyncio, .NET, </p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="font-semibold text-xl mb-3">Другое</h3>
+                        <p class="text-gray-600">Linux, Git, TCP/UDP, Многопоточность, SQL, JSON </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Опыт работы</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">MTS TrueTechChamp</h3>
+                        <p class="text-gray-600 mb-4">Программирование микроконтроллера, связь по TCP/UDP в условиях высокой нагрузки, алгоритм нахождения пути на Python и C</p>
+                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800">Подробнее →</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Hack iN Home</h3>
+                        <p class="text-gray-600 mb-4">Вебсайт, приложение и бот для нахождения площади деталей по фотографии в реальном времени на Flask, Tauri, Open-CV</p>
+                        <a href="#" class="text-red-600 font-semibold hover:text-red-800">Нет более подробной информации</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Graph-to-code</h3>
+                        <p class="text-gray-600 mb-4">Приложение для редактирования графов и генерации машин состояний на C++, sfml-imgui, QT</p>
+                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800">Подробнее →</a>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/300" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Ugolki</h3>
+                        <p class="text-gray-600 mb-4">Приложение с игрой "Уголки" и исскуственным интеллектом на c++ sfml</p>
+                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+     <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Мои контакты</h2>
+            <div class="text-center">
+                <a href="https://t.me/roffio" 
+                   class="contact-button inline-block bg-indigo-600 text-white text-xl py-6 px-12 rounded-full font-bold hover:bg-indigo-700 shadow-lg transition-all duration-300">
+                    Связаться со мной
+                </a>
+                <p class="mt-6 text-gray-600">Давайте вместе создадим что-то потрясающее!</p>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
