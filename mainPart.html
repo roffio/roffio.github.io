@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Modern Interactions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            margin: 0;
+        }
+
+        #minimum-container {
+            background-color: #fff;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: calc(100% - 12px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5);
+        }
+
+        #result,
+        #result2,
+        #user-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #495057;
+            font-weight: bold;
+        }
+
+        #user-info {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="minimum-container">
+        <h2>Find the Minimum Number</h2>
+        <div>
+            <label for="num1">Enter first number:</label>
+            <input type="number" id="num1">
+        </div>
+        <div>
+            <label for="num2">Enter second number:</label>
+            <input type="number" id="num2">
+        </div>
+        <button onclick="findMinimum()">Find Minimum</button>
+        <div id="result"></div>
+    </div>
+
+    <div id="minimum-container">
+        <h2>Variable Definitions</h2>
+        <div>
+            <label for="name">Enter name:</label>
+            <input type="text" id="name">
+        </div>
+        <button onclick="setAdmin()">Set Admin</button>
+        <div id="result2"></div>
+    </div>
+
+    <div id="minimum-container">
+        <h2>Get User Age</h2>
+        <button onclick="getUserAge()">Get Age</button>
+        <div id="user-info"></div>
+    </div>
+
+    <script>
+        function findMinimum() {
+            const number1 = parseFloat(document.getElementById("num1").value);
+            const number2 = parseFloat(document.getElementById("num2").value);
+            const resultDiv = document.getElementById("result");
+
+            if (isNaN(number1) || isNaN(number2)) {
+                resultDiv.textContent = "Please enter valid numbers.";
+            } else {
+                const minimum = Math.min(number1, number2);
+                resultDiv.textContent = `The minimum number is: ${minimum}`;
+            }
+        }
+
+        function setAdmin() {
+            const nameInput = document.getElementById("name");
+            const adminName = nameInput.value;
+            const resultDiv = document.getElementById("result2");
+            resultDiv.textContent = `Admin is: ${adminName}`;
+        }
+
+        function getUserAge() {
+            const age = prompt("Please enter your age:");
+            const userInfoDiv = document.getElementById("user-info");
+
+            if (age) {
+                const isConfirmed = confirm(`Вы уверены, что ${age} - ваш возраст?`);
+                if (isConfirmed) {
+                    alert(`Спасибо за подтверждение! Ваш возраст: ${age}.`);
+                    userInfoDiv.textContent = `Ваш возраст: ${age}`;
+                } else {
+                    alert("Информация о возрасте не подтверждена.");
+                    userInfoDiv.textContent = "Возраст не подтвержден.";
+                }
+            } else {
+                alert("Возраст не был введен.");
+                userInfoDiv.textContent = "Возраст не введен.";
+            }
+        }
+    </script>
+</body>
+</html>
