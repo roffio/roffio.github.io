@@ -1,141 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <style>
-        .hero-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            transition: transform 0.3s ease;
-        }
-    </style>
+    <title>Мое резюме</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Removed inline <style> block -->
 </head>
-<body class="bg-gray-100">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-10">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between">
-                <div class="flex space-x-7">
-                    <div class="flex items-center py-4">
-                        <span class="font-bold text-xl text-gray-800">Портфолио</span>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-info">
+                <h1>Иван Иванов</h1>
+                <p class="job-title">Веб-разработчик</p>
+                <p class="short-description">Увлеченный веб-разработкой с опытом создания современных и удобных веб-приложений.</p>
+                <div class="buttons">
+                    <a href="#" class="button download-cv">Скачать резюме</a>
+                    <button class="button contact-me">Связаться со мной</button>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Примеры работ</button>
+                        <div class="dropdown-content">
+                            <a href="/calculator/index.html">Открыть Калькулятор</a>
+                            <a href="mainPart.html">Смотреть другие задания</a>
+                        </div>
                     </div>
                 </div>
-                <div class="flex items-center space-x-6">
-                    <a href="#about" class="py-4 px-2 text-gray-500 hover:text-gray-900">Про меня</a>
-                    <a href="#projects" class="py-4 px-2 text-gray-500 hover:text-gray-900">Проекты</a>
-                    <a href="#contact" class="py-4 px-2 text-gray-500 hover:text-gray-900">Связаться</a>
-                </div>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero-bg min-h-screen flex items-center justify-center text-white pt-16">
-        <div class="text-center">
-            <h1 class="text-5xl font-bold mb-4">Кузьмичев Степан</h1>
-            <p class="text-xl mb-8">C++ разработчик </p>
-            <a href="#contact" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Связаться</a>
         </div>
     </header>
 
-     <!-- About Section -->
-     <section id="about" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Про меня</h2>
-            <div class="max-w-3xl mx-auto">
-                <p class="text-gray-600 leading-relaxed mb-8 text-lg">
-                    Опытный разработчик с фокусом на C++ и Python, создающий решения для десктопных и серверных приложений. Увлечён разработкой программного обеспечения, оптимизацией и многопоточностью, а также построением надёжных систем на современных технологиях.
-
-
-
-
-
-
-
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-gray-100 p-6 rounded-lg">
-                        <h3 class="font-semibold text-xl mb-3">Desktop</h3>
-                        <p class="text-gray-600">C, C++, STL, winapi, sfml, qt, MFC, Cmake, GCC, MSVC, DLL</p>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-lg">
-                        <h3 class="font-semibold text-xl mb-3">Backend</h3>
-                        <p class="text-gray-600">Python, Flask, Docker, asyncio, .NET, </p>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-lg">
-                        <h3 class="font-semibold text-xl mb-3">Другое</h3>
-                        <p class="text-gray-600">Linux, Git, TCP/UDP, Многопоточность, SQL, JSON </p>
-                    </div>
+    <main>
+        <section id="experience" class="section">
+            <div class="container">
+                <h2>Опыт работы</h2>
+                <div class="experience-item">
+                    <h3>Ведущий веб-разработчик</h3>
+                    <p class="company">ООО "СуперКомпания"</p>
+                    <p class="duration">Январь 2020 - Настоящее время</p>
+                    <ul>
+                        <li>Разработка и поддержка веб-приложений на React.</li>
+                        <li>Оптимизация производительности frontend.</li>
+                        <li>Взаимодействие с backend-разработчиками.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Младший веб-разработчик</h3>
+                    <p class="company">ООО "СтартАп"</p>
+                    <p class="duration">Июнь 2018 - Декабрь 2019</p>
+                    <ul>
+                        <li>Участие в разработке пользовательского интерфейса.</li>
+                        <li>Написание HTML, CSS и JavaScript кода.</li>
+                        <li>Тестирование и отладка веб-страниц.</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Опыт работы</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="/api/placeholder/400/300" alt="Project 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">MTS TrueTechChamp</h3>
-                        <p class="text-gray-600 mb-4">Программирование микроконтроллера, связь по TCP/UDP в условиях высокой нагрузки, алгоритм нахождения пути на Python и C</p>
-                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800">Подробнее →</a>
-                    </div>
+        <section id="education" class="section">
+            <div class="container">
+                <h2>Образование</h2>
+                <div class="education-item">
+                    <h3>Московский Государственный Университет им. М.В. Ломоносова</h3>
+                    <p class="specialty">Информационные технологии</p>
+                    <p class="duration">2014 - 2018</p>
                 </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="/api/placeholder/400/300" alt="Project 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Hack iN Home</h3>
-                        <p class="text-gray-600 mb-4">Вебсайт, приложение и бот для нахождения площади деталей по фотографии в реальном времени на Flask, Tauri, Open-CV</p>
-                        <a href="#" class="text-red-600 font-semibold hover:text-red-800">Нет более подробной информации</a>
-                    </div>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="/api/placeholder/400/300" alt="Project 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Graph-to-code</h3>
-                        <p class="text-gray-600 mb-4">Приложение для редактирования графов и генерации машин состояний на C++, sfml-imgui, QT</p>
-                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800">Подробнее →</a>
-                    </div>
-                </div>
-                <!-- Project Card 4 -->
-                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="/api/placeholder/400/300" alt="Project 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl mb-2">Ugolki</h3>
-                        <p class="text-gray-600 mb-4">Приложение с игрой "Уголки" и исскуственным интеллектом на c++ sfml</p>
-                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800">Подробнее →</a>
-                    </div>
+                <div class="education-item">
+                    <h3>Онлайн-курсы "Продвинутый JavaScript"</h3>
+                    <p class="specialty">Веб-разработка</p>
+                    <p class="duration">2019</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-     <section id="contact" class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Мои контакты</h2>
-            <div class="text-center">
-                <a href="https://t.me/roffio" 
-                   class="contact-button inline-block bg-indigo-600 text-white text-xl py-6 px-12 rounded-full font-bold hover:bg-indigo-700 shadow-lg transition-all duration-300">
-                    Связаться со мной
-                </a>
-                <p class="mt-6 text-gray-600">Давайте вместе создадим что-то потрясающее!</p>
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>Навыки</h2>
+                <ul class="skills-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React</li>
+                    <li>Flexbox</li>
+                    <li>CSS Grid</li>
+                    <li>Git</li>
+                    <li>Английский язык (B2)</li>
+                    <li>Коммуникабельность</li>
+                    <li>Решение проблем</li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Связаться со мной</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="error-message" id="name-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <div class="error-message" id="message-error"></div>
+                    </div>
+                    <button type="submit" class="button">Отправить сообщение</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Иван Иванов. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
