@@ -1,0 +1,141 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: sans-serif;
+    /* Добавим position: relative; для body, чтобы absolute позиционирование ссылки работало относительно него */
+    position: relative;
+}
+
+.return-link {
+    position: absolute; /* Позиционируем абсолютно */
+    top: 20px; /* Отступ сверху */
+    left: 20px; /* Отступ слева */
+    padding: 10px 15px;
+    background-color: #eee;
+    color: black; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    z-index: 10; /* Убедимся, что кнопка поверх калькулятора */
+}
+
+.return-link:hover {
+    background-color: #bbb;
+}
+
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-rows: auto auto auto; /* Result, Inputs, Buttons */
+    gap: 15px;
+    width: 300px; /* Фиксированная ширина для примера */
+    /* Добавим немного верхнего отступа, чтобы кнопка "Назад" не перекрывала калькулятор */
+    margin-top: 60px;
+}
+
+.result-display,
+.number-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Включаем padding и border в общую ширину */
+}
+
+.result-display {
+    background-color: #e9e9e9;
+    font-weight: bold;
+     min-height: 1.5em; /* Минимальная высота для текста */
+     line-height: 1.5em; /* Выравнивание текста по центру */
+}
+
+.result-display.red-background {
+    background-color: #ffcccc; /* Светло-красный фон */
+    color: #d32f2f; /* Темно-красный текст */
+}
+
+
+.input-fields {
+    display: flex;
+    gap: 10px; /* Расстояние между полями ввода */
+}
+
+.input-fields .number-input {
+    flex-grow: 1; /* Поля занимают все доступное место */
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки равной ширины */
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+.buttons button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #eee;
+    transition: background-color 0.1s ease;
+    user-select: none; /* Запретить выделение текста на кнопках */
+}
+
+.buttons button:active {
+    background-color: #ddd;
+}
+
+.operator-button {
+    background-color: #ff9800;
+    color: black; /* Изменено на черный */
+    border-color: #f57c00;
+}
+.operator-button:active {
+    background-color: #f57c00;
+}
+
+.calculate-button {
+    background-color: #4CAF50;
+    color: black; /* Изменено на черный */
+     /*grid-column: span 2; /* Занимает 2 колонки */
+    border-color: #388E3C;
+}
+.calculate-button:active {
+    background-color: #388E3C;
+}
+
+.clear-button {
+    background-color: #f44336;
+    color: white; /* Оставим белым, т.к. это не "спец. символ" операции */
+    border-color: #d32f2f;
+}
+.clear-button:active {
+    background-color: #d32f2f;
+}
+
+
+/* Стили для кнопки 0, если она должна быть шире */
+.buttons .zero {
+    grid-column: span 2; /* Занимает 2 колонки */
+}
+
+/* Подсветка активного поля ввода */
+.number-input.active {
+    outline: 2px solid #007bff; /* Синяя обводка */
+    border-color: #007bff;
+}
